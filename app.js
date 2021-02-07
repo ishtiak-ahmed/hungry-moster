@@ -1,10 +1,12 @@
 const searchResults = document.getElementById('search-result')
 
+// Searching for food
 function searchFood() {
     const query = document.getElementById('food').value;
     getFood(query)
 }
 
+// Get Food results from server
 function getFood(name) {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${name}`)
         .then(res => res.json())
@@ -12,6 +14,7 @@ function getFood(name) {
         .catch(err => showEmpty())
 }
 
+// Fucntion for showing search result
 function showFood(foods) {
     searchResults.innerHTML = '';
     foods.forEach(food => {
@@ -34,6 +37,7 @@ function showFood(foods) {
     });
 }
 
+// Function for showing empty search result
 function showEmpty() {
     const h2 = document.createElement('h2')
     h2.innerText = "No result Found for this query. Try something else."
@@ -41,6 +45,7 @@ function showEmpty() {
     searchResults.appendChild(h2)
 }
 
+// Single food Item
 function singleFood(id) {
     console.log('showing details')
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
@@ -48,6 +53,7 @@ function singleFood(id) {
         .then(data => renderFood(data.meals[0]))
 }
 
+// Render single food result
 function renderFood(food) {
     const imglink = (food.strMealThumb);
     let foodItem = (food.strMeal);

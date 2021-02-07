@@ -14,6 +14,7 @@ header {
   max-width: 1200px;
   margin: auto;
 }
+/* Nav menu and logo */
 nav {
   display: flex;
   justify-content: space-between;
@@ -55,6 +56,8 @@ nav .logo img {
   background-color: orangered;
   border: none;
 }
+
+/* Search result */
 #search-result {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -85,6 +88,7 @@ nav .logo img {
   overflow: hidden;
 }
 
+/* Food Item Details */
 .show {
   background-color: lightcoral;
   position: fixed;
