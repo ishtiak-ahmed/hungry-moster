@@ -66,7 +66,7 @@ nav .logo img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2em;
-  min-height: 60vh;
+  min-height: 55vh;
 }
 #search-result > h2 {
   display: block;
