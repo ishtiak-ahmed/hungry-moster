@@ -3,7 +3,11 @@ const searchResults = document.getElementById('search-result')
 // Searching for food
 function searchFood() {
     const query = document.getElementById('food').value;
-    getFood(query)
+    if (query !== '') {
+        getFood(query)
+    } else {
+        console.log('enter a letter')
+    }
 }
 
 // Get Food results from server
@@ -82,3 +86,8 @@ function renderFood(food) {
         foodDetail.innerText = ''
     })
 }
+window.addEventListener('keydown', (key) => {
+    if (key.key === "Enter") {
+        searchFood();
+    }
+})
