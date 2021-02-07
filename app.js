@@ -19,8 +19,8 @@ function showFood(foods) {
     searchResults.innerHTML = '';
     foods.forEach(food => {
         let foodItem = (food.strMeal)
-        if (foodItem.length > 20) {
-            foodItem = foodItem.slice(0, 20)
+        if (foodItem.length > 25) {
+            foodItem = foodItem.slice(0, 25)
         };
         const imglink = (food.strMealThumb);
         const item = document.createElement('div');
