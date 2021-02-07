@@ -5,8 +5,6 @@ function searchFood() {
     const query = document.getElementById('food').value;
     if (query !== '') {
         getFood(query)
-    } else {
-        console.log('enter a letter')
     }
 }
 
